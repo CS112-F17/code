@@ -55,9 +55,31 @@ public class Fraction {
 		* Return a string representation of the Fraction.
 	**/
 	public String toString() {
-		return numerator + "/" + denominator;
+
+		boolean result = isValid();
+		String resultStr = "";
+
+		if(!result) {
+			resultStr = "Invalid";
+		} else {
+			resultStr = numerator + "/" + denominator;
+		}
+		
+		return resultStr;
+		
 	}
 
+	/**
+		* Private helper method to return true
+		* if the fraction is valid (denominator is not 0)
+		* and false otherwise.
+	**/
+	private boolean isValid() {
+		if(denominator == 0) {
+			return false;
+		}
+		return true;
+	}
 
 
 }
