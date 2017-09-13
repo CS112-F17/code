@@ -7,6 +7,18 @@ public class ArrayListExample {
 
 	public static void main(String[] args) {
 
+		ArrayList<Student> students = new ArrayList<Student>();
+
+		Student s1 = new Student("Bob", "Jones", 9876, "History");
+		students.add(s1);
+		students.add(new Student("Sally", "Smith", 1234, "CS"));
+
+		for(Student s: students) {
+			System.out.println(s.getId());
+		}
+
+
+
 		//declare and initialize an ArrayList of String
 		ArrayList<String> words = new ArrayList<String>();
 
@@ -27,6 +39,9 @@ public class ArrayListExample {
 		for(String word: words) {
 			System.out.println(word);
 		}
+
+
+
 
 	}
 
