@@ -16,20 +16,24 @@ public class FileInputWords {
 		//where this program is run
 		File inputFile = new File("words.txt");
 
+		//use try-with-resources so that our file
+		//is auto-closed.
 		try(Scanner input = new Scanner(inputFile)) {
 
+			//as long as there is another word in the file
 			while(input.hasNext()) {
+				//read and print the word
 				String word = input.next();
 				System.out.println(word);
 			}
 
 		} catch(FileNotFoundException fnf) {
+			//print the exception object message in case the
+			//file is not found
 			System.out.println(fnf.getMessage());
 		}
 
-		//uses a try-with-resources 
 		System.out.println("Thank you for playing...");
-		//REST OF PROGRAM
 
 	}
 

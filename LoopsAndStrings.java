@@ -18,7 +18,7 @@ public class LoopsAndStrings {
 		for(int i = 0; i < size; i++) {
 			char c = s.charAt(i);
 			//use the static method isWhitespace in the Character
-			//class to determine whether a whitespace has been foundx
+			//class to determine whether a whitespace has been found
 			if(Character.isWhitespace(c)) {
 				System.out.println("whitespace found at position: " + i);
 				wscount++;

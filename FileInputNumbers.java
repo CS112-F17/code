@@ -5,7 +5,10 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-
+/**
+	A class to demonstrate how to read in a list
+	of numbers from a file and store them in a list.
+**/
 public class FileInputNumbers {
 
 	public static void main(String[] args) {
@@ -15,7 +18,7 @@ public class FileInputNumbers {
 		//where this program is run
 		File inputFile = new File("numbers.txt");
 
-		//fix this
+		//cannot create an ArrayList of primitive types
 		ArrayList<Integer> numbers = new ArrayList<Integer>();
 
 		try(Scanner input = new Scanner(inputFile)) {
@@ -23,6 +26,8 @@ public class FileInputNumbers {
 			while(input.hasNextInt()) {
 				int number = input.nextInt();
 
+				//alternate option necessary to ignore
+				//any non-integer input in the file
 				// String line = input.nextLine();
 				// int number = 0;
 				// try {
@@ -31,7 +36,6 @@ public class FileInputNumbers {
 				// 	System.out.println("cannot convert to integer: " + line);
 				// }
 				numbers.add(number);
-				// System.out.println(number);
 			}
 
 
