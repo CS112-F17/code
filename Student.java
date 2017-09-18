@@ -34,6 +34,16 @@ public class Student {
 
 	}
 
+	public Student(String firstName, int id) {
+
+		this.name = new Name(firstName, "Unknown");
+		this.id = id;
+		this.major = "Undeclared";
+		this.missedDays = 0;
+		// this(name, id, "Undeclared");		
+
+	}
+
 	public Student() {
 		this(new Name("", ""), 0, "");
 	}
