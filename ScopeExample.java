@@ -1,7 +1,8 @@
 /**
 	A class to demonstrate scope.
 
-**/public class ScopeExample {
+**/
+public class ScopeExample {
 
 	public static void method(int x) {
 		x = x + 1;
