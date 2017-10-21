@@ -82,6 +82,11 @@ public class TwoDArrays {
 			scores[1][2] = 97;
 
 			display(scores);
+			System.out.println(highScore(scores));
+			double[] averages = average(scores); 
+			for(double d: averages) {
+				System.out.println(d);
+			}
 
 
 
