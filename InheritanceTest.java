@@ -5,48 +5,58 @@ public class InheritanceTest {
 	public static void main(String[] args) {
 
 
-		USFPerson[] people = new USFPerson[5];
-		people[0] = new USFStudent("Andy", 9866, 3.67, "History");
-		people[1] = new USFStudent("Shirley", 2233, 2.4, "Biology");
-		people[2] = new USFStudent("Shirley", 7645, 3.29, "Art");
-		people[3] = new Faculty("Bob", 1234, 90000);
-		people[4] = new Faculty("Javier", 2236, 180000);
+		USFStudent s = new USFStudent("Bob", 1234, 3.5, "History");
+		USFPerson p = s;
+		Comparable c = p;
+		Object o = p;
 
-		Arrays.sort(people);
+		// USFStudent s2 = new USFStudent("Bob", 1234, 3.5, "History");
 
-		//may cause a ClassCastException!
-		// Faculty f = (Faculty)people[0];
+		System.out.println(p.show());
 
 
-		for(USFPerson p: people) {
-			System.out.println(p);
+		// USFPerson[] people = new USFPerson[5];
+		// people[0] = new USFStudent("Andy", 9866, 3.67, "History");
+		// people[1] = new USFStudent("Shirley", 2233, 2.4, "Biology");
+		// people[2] = new USFStudent("Shirley", 7645, 3.29, "Art");
+		// people[3] = new Faculty("Bob", 1234, 90000);
+		// people[4] = new Faculty("Javier", 2236, 180000);
 
-			if(p instanceof USFStudent) {
+		// Arrays.sort(people);
 
-				USFStudent s = (USFStudent)p;
-				//print GPA
-				System.out.println(s.getGpa());
-
-			} else if(p instanceof Faculty) {
-
-				Faculty f = (Faculty)p;
-				System.out.println(f.getSalary());
-			}
-		}
+		// //may cause a ClassCastException!
+		// // Faculty f = (Faculty)people[0];
 
 
-		// USFPerson p = new USFStudent("Andy", 9866, 3.67, "History");
-		// System.out.println(p.getGpa());
+		// for(USFPerson p: people) {
+		// 	System.out.println(p);
 
+		// 	if(p instanceof USFStudent) {
 
+		// 		USFStudent s = (USFStudent)p;
+		// 		//print GPA
+		// 		System.out.println(s.getGpa());
 
+		// 	} else if(p instanceof Faculty) {
 
-		// if(p instanceof Faculty) {
-		// 	Faculty f = (Faculty)p;
-		// 	System.out.println(f.getSalary());
+		// 		Faculty f = (Faculty)p;
+		// 		System.out.println(f.getSalary());
+		// 	}
 		// }
 
-		// p = new USFStudent("Andy", 9866, 3.67, "History");
+
+		// // USFPerson p = new USFStudent("Andy", 9866, 3.67, "History");
+		// // System.out.println(p.getGpa());
+
+
+
+
+		// // if(p instanceof Faculty) {
+		// // 	Faculty f = (Faculty)p;
+		// // 	System.out.println(f.getSalary());
+		// // }
+
+		// // p = new USFStudent("Andy", 9866, 3.67, "History");
 
 
 	}
